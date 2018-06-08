@@ -1,11 +1,18 @@
 <form class="question" method="post" action="/quiz">
-  <h4>{{Questions}}</h4>
+  <h4><strong>{{Questions}}</strong></h4>
   <div>
     {{#each Answers}}
     <label for="contactChoice1"><input type="radio" 
-      name="name" value="{{name}}">{{Answer}}</label>
+      name="name" value="{{name}}" onclick="active()">{{Answer}}</label>
     {{/each }}
         
-    <button type="submit">Submit</button>
+    <button id="submitBtn" class="greyed" disabled type="submit">SUBMIT</button>
   </div>
 </form>
+<script>
+  function active() {
+    let submit = document.getElementById('submitBtn')
+    submit.classList.remove('greyed')
+    submitBtn.disabled = false    
+  }
+</script>

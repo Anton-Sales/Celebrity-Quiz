@@ -21,8 +21,8 @@ body {
 }
 
 h1 {
-  font-size: 50px;
-  font-family: 'Concert One', cursive;
+  font-size: 55px;
+  font-family: 'Bungee Shade', cursive;
 }
 
 .two.columns {
@@ -41,4 +41,61 @@ h1 {
     text-align: center;
 }
 
+/*INTRO*/
+p {
+  padding-left: 20px;
+  font-size: 30px;
+}
 
+h3 {
+  font-family: 'Bungee Inline', cursive;
+  text-align: center;
+  font-size: 40px;
+}
+
+.button {
+  display: flex; 
+  justify-content: center;
+  font-size: 20px;
+  background-color: chartreuse;
+}
+
+
+/*QUIZ*/
+
+label {
+  font-size: 25px;
+  padding-left: 20px;
+  text-decoration: none;
+}
+
+button {
+  background-color: cyan;
+  font-family: 'Concert One', cursive;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+h4 {
+  padding-left: 20px;
+  font-size: 30px;
+
+}
+/*RESULTS*/
+h2 {
+  text-align: center;
+  font-family: 'Bungee Inline', cursive;
+  font-size: 80px;
+}
+
+.seven.columns {
+  font-size: 30px;
+}
+
+h1.drum-roll {
+  padding-left: 20px;
+}
+
+.greyed {
+  background-color: grey;
+}
