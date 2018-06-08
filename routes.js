@@ -2,19 +2,15 @@ const express = require('express')
 const fileFun = require('./fileFun')
 const router = express.Router()
 
-let score = [
-  {name: "anton", score: 0},
-  {name: "brad", score: 0},
-  {name: "cate", score: 0},
-  {name: "rebecca", score: 0},
-  {name: "ross", score: 0}
-]
+let questions
+let score
 
 router.get('/', (req, res) => {
   res.redirect('/home')
 })
 
 router.get('/home', (req, res) => {
+  resetScore()
   //make questions = questions.json
   fileFun.readJSON('./questions.json', obj => {
     questions = obj
@@ -23,18 +19,25 @@ router.get('/home', (req, res) => {
 })
 
 router.get('/quiz', (req, res) => {
+  if (questions) {
   // question = next question from array
   let question = questions.pop()
   res.render('quiz', question)
+  }
+  else res.redirect('/home')
+
 })
 
 router.get('/profile', (req, res) => {
+  if (score) {
   //get profiles from profiles.json
   fileFun.readJSON('./profiles.json', obj => {
     //winner = profile from the highest score
     let winner = getWinner(obj)
-    res.render('profile', winner)    
+    res.render('profile', winner)
   })
+  }
+  else res.redirect('/home')
 })
 
 router.post('/home', (req, res) => {
@@ -43,7 +46,6 @@ router.post('/home', (req, res) => {
 
 router.post('/quiz', (req, res) => {
   let answer = req.body.name.toLowerCase()
-  //console.log(answer)
   // add answer to score
   addScore(answer)
   //if all questions answered
@@ -68,6 +70,16 @@ function getWinner(profiles) {
 function addScore(answer) {
   let scorer = score.find(obj => obj.name == answer)
   scorer.score++
+}
+
+function resetScore() {
+  score = [
+    {name: "anton", score: 0},
+    {name: "brad", score: 0},
+    {name: "cate", score: 0},
+    {name: "rebecca", score: 0},
+    {name: "ross", score: 0}
+  ]
 }
 
 module.exports = router
