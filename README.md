@@ -20,4 +20,4 @@
 
 ![image](https://user-images.githubusercontent.com/37031684/44058974-ef0f829c-9fa3-11e8-9aab-9a6ec0973177.png)
 
-![image](https://user-images.githubusercontent.com/37031684/44060709-a63abe46-9fa9-11e8-8b35-e9d5a4ca1cc3.png)
+![image](https://user-images.githubusercontent.com/37031684/44060961-8be48896-9faa-11e8-8212-ff7abc69b5a0.png)
