@@ -22,7 +22,7 @@
         {"Answer": "Group projects", "name": "Anton"},
         {"Answer": "Fear", "name": "Ross"},
         {"Answer": "Death", "name": "Cate"}
-    ]},
+    ]}, 
     {"Questions": "Which is the meme you like the most?",
     "Answers": [
         {"Answer": "Wow (Owen Wilson)", "name": "Brad"},
